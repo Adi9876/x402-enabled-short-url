@@ -1,7 +1,5 @@
-import { useWallet } from '../hooks/useWallet';
-
-export function WalletConnect() {
-  const { account, isConnected, isConnecting, error, connectWallet, disconnectWallet, isMetaMaskInstalled } = useWallet();
+export function WalletConnect({ wallet }) {
+  const { account, isConnected, isConnecting, error, connectWallet, disconnectWallet, isMetaMaskInstalled } = wallet;
 
   if (!isMetaMaskInstalled()) {
     return (
