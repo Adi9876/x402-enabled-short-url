@@ -50,6 +50,8 @@ export function useWallet() {
       window.ethereum.on("accountsChanged", handleAccountsChanged);
       window.ethereum.on("chainChanged", handleChainChanged);
 
+      setTimeout(() => window.location.reload(), 0);
+
       return true;
     } catch (err) {
       setError(err.message || "Failed to connect wallet");
