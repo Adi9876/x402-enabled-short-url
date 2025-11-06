@@ -11,7 +11,7 @@ export function Analytics() {
 
   const fetchAnalytics = async (e) => {
     e.preventDefault();
-    
+
     if (!shortId) {
       setError('Please enter a short URL ID');
       return;
@@ -63,7 +63,7 @@ export function Analytics() {
             <h3>Total Clicks</h3>
             <p className="stat-number">{analytics.totalClicks}</p>
           </div>
-          
+
           {analytics.analytics && analytics.analytics.length > 0 && (
             <div className="click-history">
               <h3>Click History</h3>

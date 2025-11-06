@@ -7,7 +7,6 @@ import { Analytics } from './components/Analytics';
 import './App.css';
 
 function App() {
-  const [showSignup, setShowSignup] = useState(false);
   const [activeTab, setActiveTab] = useState('shorten');
 
   // No auth loading anymore
