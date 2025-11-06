@@ -1,14 +1,118 @@
 .app-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000000;
   padding: 2rem;
-  color: #333;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 5% 15%, #ffffff, transparent),
+    radial-gradient(1px 1px at 12% 25%, #ffffff, transparent),
+    radial-gradient(1px 1px at 18% 35%, #ffffff, transparent),
+    radial-gradient(1px 1px at 25% 45%, #ffffff, transparent),
+    radial-gradient(1px 1px at 32% 55%, #ffffff, transparent),
+    radial-gradient(1px 1px at 38% 65%, #ffffff, transparent),
+    radial-gradient(1px 1px at 45% 75%, #ffffff, transparent),
+    radial-gradient(1px 1px at 52% 85%, #ffffff, transparent),
+    radial-gradient(1px 1px at 58% 95%, #ffffff, transparent),
+    radial-gradient(1px 1px at 65% 5%, #ffffff, transparent),
+    radial-gradient(1px 1px at 72% 15%, #ffffff, transparent),
+    radial-gradient(1px 1px at 78% 25%, #ffffff, transparent),
+    radial-gradient(1px 1px at 85% 35%, #ffffff, transparent),
+    radial-gradient(1px 1px at 92% 45%, #ffffff, transparent),
+    radial-gradient(1px 1px at 8% 55%, #ffffff, transparent),
+    radial-gradient(1px 1px at 15% 65%, #ffffff, transparent),
+    radial-gradient(1px 1px at 22% 75%, #ffffff, transparent),
+    radial-gradient(1px 1px at 28% 85%, #ffffff, transparent),
+    radial-gradient(1px 1px at 35% 95%, #ffffff, transparent),
+    radial-gradient(1px 1px at 42% 5%, #ffffff, transparent),
+    radial-gradient(2px 2px at 48% 12%, #ffffff, transparent),
+    radial-gradient(2px 2px at 55% 22%, #ffffff, transparent),
+    radial-gradient(2px 2px at 62% 32%, #ffffff, transparent),
+    radial-gradient(2px 2px at 68% 42%, #ffffff, transparent),
+    radial-gradient(2px 2px at 75% 52%, #ffffff, transparent),
+    radial-gradient(2px 2px at 82% 62%, #ffffff, transparent),
+    radial-gradient(2px 2px at 88% 72%, #ffffff, transparent),
+    radial-gradient(2px 2px at 95% 82%, #ffffff, transparent),
+    radial-gradient(1px 1px at 3% 92%, #ffffff, transparent),
+    radial-gradient(1px 1px at 98% 8%, #ffffff, transparent);
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  filter: blur(0.3px);
+  z-index: 0;
+  animation: starfield 30s linear infinite;
+}
+
+.app-container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(0.5px 0.5px at 7% 18%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 14% 28%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 21% 38%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 27% 48%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 34% 58%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 41% 68%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 47% 78%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 54% 88%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 61% 98%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 67% 8%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 74% 18%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 81% 28%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 87% 38%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 94% 48%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 11% 58%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 17% 68%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 24% 78%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 31% 88%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 37% 98%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 44% 3%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 51% 13%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 57% 23%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 64% 33%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 71% 43%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 77% 53%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 84% 63%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 91% 73%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 97% 83%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(0.5px 0.5px at 4% 93%, rgba(255, 255, 255, 0.8), transparent);
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  opacity: 0.3;
+  filter: blur(0.2px);
+  z-index: 0;
+  animation: starfield 40s linear infinite reverse;
+}
+
+@keyframes starfield {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .app-header {
   text-align: center;
   margin-bottom: 2rem;
-  color: white;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
 .app-header h1 {
@@ -26,16 +130,18 @@
 .main-content {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
 }
 
 .user-section {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #94a3b8;
 }
 
 .user-info {
@@ -47,7 +153,7 @@
 .wallet-section {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: rgba(226, 232, 240, 0.6);
   border-radius: 8px;
 }
 
@@ -74,30 +180,31 @@
 
 .wallet-label {
   font-weight: 600;
-  color: #666;
+  color: #475569;
 }
 
 .wallet-address {
   font-family: monospace;
-  background: #e9ecef;
+  background: rgba(255, 255, 255, 0.8);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  color: #1e293b;
 }
 
 .wallet-error {
   text-align: center;
   padding: 1rem;
-  background: #fff3cd;
-  border: 1px solid #ffc107;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid #fbbf24;
   border-radius: 8px;
-  color: #856404;
+  color: #92400e;
 }
 
 .install-link {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #667eea;
+  color: #06b6d4;
   font-weight: 600;
   text-decoration: none;
 }
@@ -110,7 +217,7 @@
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #94a3b8;
 }
 
 .tab-button {
@@ -122,18 +229,18 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
-  color: #666;
+  color: #475569;
   transition: all 0.3s;
 }
 
 .tab-button:hover {
-  color: #667eea;
-  background: #f8f9fa;
+  color: #06b6d4;
+  background: rgba(226, 232, 240, 0.4);
 }
 
 .tab-button.active {
-  color: #667eea;
-  border-bottom-color: #667eea;
+  color: #06b6d4;
+  border-bottom-color: #06b6d4;
 }
 
 .tab-content {
@@ -152,7 +259,7 @@
 .auth-form h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #1e293b;
   text-align: center;
 }
 
@@ -164,34 +271,36 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #555;
+  color: #334155;
 }
 
 .form-group input {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #94a3b8;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #06b6d4;
 }
 
 .auth-switch {
   text-align: center;
   margin-top: 1.5rem;
-  color: #666;
+  color: #475569;
 }
 
 .link-button {
   background: none;
   border: none;
-  color: #667eea;
+  color: #06b6d4;
   cursor: pointer;
   font-weight: 600;
   text-decoration: underline;
@@ -199,7 +308,7 @@
 }
 
 .link-button:hover {
-  color: #764ba2;
+  color: #22d3ee;
 }
 
 /* URL Shortener */
@@ -207,22 +316,22 @@
 .analytics h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #1e293b;
 }
 
 .subtitle {
-  color: #666;
+  color: #475569;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
 
 .warning-message {
-  background: #fff3cd;
-  border: 1px solid #ffc107;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid #fbbf24;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  color: #856404;
+  color: #92400e;
   text-align: center;
 }
 
@@ -233,29 +342,31 @@
 .url-input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #94a3b8;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
 }
 
 .url-input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #06b6d4;
 }
 
 .result-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: #f8f9fa;
+  background: rgba(226, 232, 240, 0.6);
   border-radius: 12px;
-  border: 2px solid #667eea;
+  border: 2px solid #06b6d4;
 }
 
 .result-box h3 {
   margin-top: 0;
-  color: #667eea;
+  color: #06b6d4;
 }
 
 .short-url-display {
@@ -267,17 +378,18 @@
 .short-url-input {
   flex: 1;
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #94a3b8;
   border-radius: 8px;
   font-size: 0.9rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   font-family: monospace;
+  color: #1e293b;
 }
 
 .short-id {
   margin: 0;
   font-size: 0.9rem;
-  color: #666;
+  color: #475569;
   font-family: monospace;
 }
 
@@ -291,7 +403,7 @@
 }
 
 .stat-box {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -317,7 +429,7 @@
 
 .click-history h3 {
   margin-bottom: 1rem;
-  color: #333;
+  color: #1e293b;
 }
 
 .history-list {
@@ -327,15 +439,15 @@
 
 .history-item {
   padding: 0.75rem;
-  background: #f8f9fa;
+  background: rgba(226, 232, 240, 0.6);
   border-radius: 6px;
   margin-bottom: 0.5rem;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid #06b6d4;
 }
 
 .timestamp {
   font-family: monospace;
-  color: #666;
+  color: #475569;
   font-size: 0.9rem;
 }
 
@@ -357,13 +469,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.5);
 }
 
 .btn-primary:active:not(:disabled) {
@@ -371,12 +483,12 @@
 }
 
 .btn-secondary {
-  background: #6c757d;
+  background: #64748b;
   color: white;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #5a6268;
+  background: #475569;
 }
 
 .btn-large {
@@ -392,21 +504,21 @@
 
 /* Messages */
 .error-message {
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
   border-radius: 8px;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  color: #721c24;
+  color: #991b1b;
 }
 
 .success-message {
-  background: #d4edda;
-  border: 1px solid #c3e6cb;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid #22c55e;
   border-radius: 8px;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  color: #155724;
+  color: #166534;
 }
 
 .loading {
