@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { useWallet } from '../hooks/useWallet';
 import { createX402Client } from '../utils/x402Client';
 // import { useAuth } from '../hooks/useAuth';
 
-export function UrlShortener() {
-    const { account, isConnected } = useWallet();
+export function UrlShortener({ wallet }) {
+    const { account, isConnected } = wallet;
     // const { api } = useAuth();
     const [url, setUrl] = useState('');
     const [shortId, setShortId] = useState(null);
@@ -39,9 +38,9 @@ export function UrlShortener() {
             const id = response.data.id;
             setShortId(id);
             const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8001';
-            console.log("API BASE URL IS:  ",API_BASE_URL);
+            console.log("API BASE URL IS:  ", API_BASE_URL);
             setFullShortUrl(`${API_BASE_URL}/url/${id}`);
-            setUrl(''); 
+            setUrl('');
             if (response.headers['x-payment-response']) {
                 console.log('Payment completed:', response.headers['x-payment-response']);
             }
@@ -61,6 +60,7 @@ export function UrlShortener() {
         navigator.clipboard.writeText(fullShortUrl);
         alert('Copied to clipboard!');
     };
+
 
     return (
         <div className="url-shortener">

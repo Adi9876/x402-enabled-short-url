@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useWallet } from './hooks/useWallet';
 import { WalletConnect } from './components/WalletConnect';
 import { Login } from './components/Login';
 import { Signup } from './components/Signup';
@@ -8,6 +9,7 @@ import './App.css';
 
 function App() {
   const [activeTab, setActiveTab] = useState('shorten');
+  const wallet = useWallet();
 
   // No auth loading anymore
 
@@ -21,7 +23,7 @@ function App() {
       <div className="main-content">
         {/* Auth removed: always show app */}
         <div className="wallet-section">
-          <WalletConnect />
+          <WalletConnect wallet={wallet} />
         </div>
 
         <div className="tabs">
@@ -40,7 +42,7 @@ function App() {
         </div>
 
         <div className="tab-content">
-          {activeTab === 'shorten' && <UrlShortener />}
+          {activeTab === 'shorten' && <UrlShortener wallet={wallet} />}
           {activeTab === 'analytics' && <Analytics />}
         </div>
       </div>
